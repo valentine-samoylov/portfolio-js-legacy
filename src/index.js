@@ -1,7 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import './index.scss'
 import App from './App'
 
-const mountNode = document.getElementById('root')
-ReactDOM.render(<App />, mountNode)
+const container = document.getElementById('app')
+const root = createRoot(container)
+
+root.render(<App tab="home" />)

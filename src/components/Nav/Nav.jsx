@@ -1,10 +1,16 @@
 // Nav
 import { useState } from 'react'
 import './Nav.scss'
+import NavLink from '@components/NavLink/NavLink'
+import { navLinks } from './navLinks'
+import useScrollLock from '@hooks/useScrollLock'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => setIsOpen(!isOpen)
+  const toggle = () => {
+    setIsOpen(!isOpen)
+    useScrollLock()
+  }
   const hide = () => setIsOpen(false)
   const show = () => setIsOpen(true)
 
@@ -18,35 +24,25 @@ const Nav = () => {
     },
   ]
 
-  const navigation = [{ href: '', text: '' }]
-
   return (
     <nav className="nav">
       <button
-        className={`nav__btn ${isOpen ? 'is-active' : ''}`}
+        className={`nav__btn ${isOpen ? 'isActive' : ''}`}
         title="Navigation Menu"
         onClick={toggle}
       >
         <svg width={40} height={40} viewBox="0 0 100 100">
-          {navSvg.map((navPath) => (
-            <path className="nav__path-line" d={navPath.d} />
+          {navSvg.map((navPath, idx) => (
+            <path className="nav__pathLine" d={navPath.d} key={idx} />
           ))}
         </svg>
       </button>
 
-      <div className={`nav__body ${isOpen ? 'is-open' : ''}`}>
+      <div className={`nav__body ${isOpen ? 'isOpen' : ''}`}>
         <ul className="nav__links d-f">
-          {navigation.map((nav) => (
-            <li className="nav__item" key={nav.text}>
-              <a
-                className="nav__link"
-                href={nav.href}
-                onClick={toggle}
-                onBlur={hide}
-                onFocus={show}
-              >
-                {nav.text}
-              </a>
+          {navLinks.map(({ navLinkId, scrollToId, linkText }, idx) => (
+            <li className="nav__item" onClick={toggle} onBlur={hide} onFocus={show} key={idx}>
+              <NavLink navLinkId={navLinkId} scrollToId={scrollToId} linkText={linkText} />
             </li>
           ))}
         </ul>

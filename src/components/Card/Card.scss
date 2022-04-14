@@ -1,0 +1,137 @@
+// Card
+@import '@assets/styles/utils/variables';
+@import '@assets/styles/utils/mixins';
+
+.card {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: $colorDarkGray;
+  overflow: hidden;
+  will-change: transform;
+
+  @include respond-min(lg) {
+    &:hover {
+      .card__pic {
+        transform: scale(1.02);
+      }
+
+      .card__pic::before {
+        background-color: rgba($colorDarkPrimary, 0.8);
+      }
+
+      .card__details {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__pic {
+    transition: transform 0.3s $transitionStyle 0s;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($colorDarkPrimary, 0.3);
+      transition: background-color 0.3s $transitionStyle 0s;
+      content: '';
+    }
+  }
+
+  &__details {
+    padding: 1.5rem;
+    padding: 1rem;
+
+    @include respond-min(lg) {
+      & {
+        position: absolute;
+        align-items: center;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        text-align: center;
+        transition: opacity 0.3s $transitionStyle 0s;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin: 0 0 0.75rem;
+    color: rgba($colorWhite, 0.6);
+  }
+
+  &__text,
+  &__title {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__techStack {
+    margin: 0 0 1.5rem;
+    gap: 0.5rem;
+  }
+
+  &__techStackItem {
+    padding: 0.25em 0.5em;
+    border-radius: 2rem;
+    background-color: rgba($colorWhite, 0.6);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $colorDarkGray;
+
+    svg {
+      margin-right: 0.3em;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    transition: color 0.3s $transitionStyle 0s;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    @include respond-min(md) {
+      &:hover {
+        color: $colorAccentPrimary;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+
+    @include respond-min(lg) {
+      & {
+        width: 2rem;
+        height: 2rem;
+        margin: 0;
+      }
+    }
+  }
+
+  &__linkText {
+    @include respond-min(lg) {
+      & {
+        display: none;
+      }
+    }
+  }
+}

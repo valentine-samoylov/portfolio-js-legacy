@@ -1,16 +1,20 @@
 // Footer
-import React from 'react'
 import './Footer.scss'
-class Footer extends React.Component {
-  render() {
-    return (
-      <footer className="footer">
-        <div className="container">
-          <div className="d-f jc-c">Coded with ❤ by Valentine Samoylov.</div>
+import Container from '@components/Container/Container'
+import IconHeart from '@assets/images/svg/heart.svg'
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <Container>
+        <div className="footer__copyright d-f jc-c ai-c">
+          <span className="footer__label">Coded with</span>
+          <IconHeart className="footer__icon" />
+          <span className="footer__label">by Valentine Samoylov</span>
         </div>
-      </footer>
-    )
-  }
+      </Container>
+    </footer>
+  )
 }
 
 export default Footer

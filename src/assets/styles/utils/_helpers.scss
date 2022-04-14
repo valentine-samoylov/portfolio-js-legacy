@@ -77,6 +77,43 @@
   @include img-fluid();
 }
 
+// Aspect ratio 16:9
+.ar-16-9 {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Overlay for images
+.ovl-07 {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba($colorDarkPrimary, 0.7);
+    content: '';
+  }
+}
+
+// Misc
 .text-truncate {
   @include text-truncate();
 }

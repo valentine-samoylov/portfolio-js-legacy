@@ -21,11 +21,25 @@ $breakpoints: (
 );
 
 // Fonts
-$fontInter: 'Inter', sans-serif;
+$fontMontserrat: 'Montserrat', sans-serif;
 
 // Colours
 $colorWhite: #ffffff;
-$colorBlack: #000000;
+$colorDarkGray: #1a1a1a;
+$colorDarkPrimary: #070707;
+$colorDarkSecondary: lighten($colorDarkPrimary, 2.8%);
+$colorAccentPrimary: #8b5cf6;
+$colorAccentGradient: linear-gradient(
+  135deg,
+  #8b5cf6,
+  #8958f5,
+  #8753f4,
+  #844ef2,
+  #824af1,
+  #8045f0,
+  #7e3fee,
+  #7c3aed
+);
 
 // Transitions
 $transitionStyle: ease;

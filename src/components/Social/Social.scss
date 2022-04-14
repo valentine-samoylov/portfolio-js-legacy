@@ -1,0 +1,13 @@
+// Social
+@import '@assets/styles/utils/variables';
+@import '@assets/styles/utils/mixins';
+
+.social {
+  &__item {
+    will-change: transform;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -2,11 +2,13 @@
 
 ## Features
 
-- Support of React library
-- React Refresh (**Dev mode**)
-- Styling with SASS/SCSS preprocessor
-- PostCSS preprocessor
-  - Autoprefixer
+- Uses the Yarn 3.xx package manager with PnP mode
+- Supports React library
+- React Refresh (HMR) (**Dev mode**)
+- Styling preprocessors:
+  - SASS/SCSS
+  - PostCSS preprocessor
+    - Autoprefixer
 - Babel transpiller
 - Source-maps for CSS and JS files (**Dev mode**)
 - Minification of HTML/CSS/JS files (**Prod mode**)
@@ -15,6 +17,8 @@
 - SVGR converts SVG into React components and inserts them as inline SVG into HTML.
 - ESlint and Stylelint
 - Prettier
+- Webpack Bundle Analyzer (**Prod mode**)
+  - An HTML report file will be created in the **reports** folder.
 
 ## Scripts
 

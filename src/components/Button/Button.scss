@@ -1,0 +1,93 @@
+// Button
+@import '@assets/styles/utils/variables';
+@import '@assets/styles/utils/mixins';
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: fit-content;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  white-space: nowrap;
+  color: inherit;
+  transition: all 0.3s $transitionStyle 0s;
+  outline: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    margin: 0 0.5em 0 0;
+  }
+
+  &--primary {
+    padding: 1em 2em;
+    background-image: $colorAccentGradient;
+    border-radius: 3em;
+    font-weight: 700;
+
+    @include respond-min(md) {
+      &:hover {
+        box-shadow: 0 0.222rem 0.833rem 0 saturate($colorAccentPrimary, 20%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.1875rem rgba($colorAccentPrimary, 0.5);
+      }
+
+      &:active {
+        box-shadow: inset 0px 0.1875rem 0.25rem rgba($colorDarkPrimary, 0.5);
+      }
+    }
+  }
+
+  &--tertiary {
+    padding: 0 0.2em;
+    color: rgba($colorWhite, 0.6);
+    font-weight: 400;
+  }
+
+  &--icon {
+    font-size: 2rem;
+
+    svg {
+      margin: 0;
+    }
+  }
+
+  &--tertiary,
+  &--icon {
+    border-radius: 0.25rem;
+
+    @include respond-min(md) {
+      &:hover {
+        color: $colorAccentPrimary;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.1875rem rgba($colorAccentPrimary, 0.5);
+      }
+
+      &:active {
+        color: saturate($colorAccentPrimary, 15%);
+      }
+    }
+  }
+
+  &--reversed {
+    svg {
+      order: 1;
+      margin: 0 0 0 0.5em;
+    }
+  }
+
+  &--centered {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

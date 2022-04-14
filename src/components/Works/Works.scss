@@ -1,0 +1,30 @@
+// Works
+@import '@assets/styles/utils/variables';
+@import '@assets/styles/utils/mixins';
+
+.works {
+  &__content {
+    margin-bottom: 3rem;
+  }
+
+  &__items {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+
+  @include respond-max(md) {
+    &__content {
+      place-items: center;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, (minmax(auto, 20rem)));
+    }
+  }
+
+  @include respond-max(xs) {
+    &__items {
+      grid-template-columns: minmax(auto, 18.125rem);
+    }
+  }
+}

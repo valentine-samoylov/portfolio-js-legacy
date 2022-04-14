@@ -1,6 +1,6 @@
 // Nav
-@import '../../assets/styles/utils/variables';
-@import '../../assets/styles/utils/mixins';
+@import '@assets/styles/utils/variables';
+@import '@assets/styles/utils/mixins';
 
 .nav {
   &__btn {
@@ -17,36 +17,6 @@
     padding: 0 0.5rem;
   }
 
-  &__link {
-    position: relative;
-    color: rgba($white, 0.6);
-    font-weight: 700;
-    letter-spacing: 0.094em;
-    transition: color 0.3s $transition-style 0s;
-
-    &::before {
-      position: absolute;
-      bottom: -3px;
-      width: 100%;
-      height: 3px;
-      display: block;
-      background-color: $white;
-      transform: scale(0);
-      transition: transform 0.3s $transition-style 0s;
-      content: '';
-    }
-
-    &.is-active::before,
-    &:hover::before {
-      transform: scale(1);
-    }
-
-    &.is-active,
-    &:hover {
-      color: $white;
-    }
-  }
-
   @include respond-max(md) {
     &__btn {
       position: relative;
@@ -57,20 +27,20 @@
       border: none;
       outline: transparent;
 
-      &.is-active {
-        .nav__path-line:first-child {
+      &.isActive {
+        .nav__pathLine:first-child {
           stroke-dasharray: 90 207;
           stroke-dashoffset: -134;
           stroke-width: 6;
         }
 
-        .nav__path-line:nth-child(2) {
+        .nav__pathLine:nth-child(2) {
           stroke-dasharray: 1 60;
           stroke-dashoffset: -30;
           stroke-width: 6;
         }
 
-        .nav__path-line:last-child {
+        .nav__pathLine:last-child {
           stroke-dasharray: 90 207;
           stroke-dashoffset: -134;
           stroke-width: 6;
@@ -78,9 +48,9 @@
       }
     }
 
-    &__path-line {
+    &__pathLine {
       fill: none;
-      stroke: $white;
+      stroke: $colorWhite;
       stroke-width: 6;
       transition: stroke-dasharray 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -110,13 +80,13 @@
       height: 100%;
       margin: 0;
       padding: 5rem 2rem 2rem;
-      background-color: rgba($dark-primary, 0.97);
+      background-color: rgba($colorDarkPrimary, 0.97);
       transform: translateX(100%);
-      backdrop-filter: blur(3px);
-      transition: transform 0.5s $transition-style 0s;
+      backdrop-filter: blur(0.1875rem);
+      transition: transform 0.5s $transitionStyle 0s;
       overflow: auto;
 
-      &.is-open {
+      &.isOpen {
         transform: translateX(0);
       }
     }
@@ -128,11 +98,7 @@
 
     &__item {
       margin: 0;
-      padding: 0.8rem 0;
-    }
-
-    &__link {
-      font-size: 1.5rem;
+      padding: 0.5rem 0;
     }
   }
 }
