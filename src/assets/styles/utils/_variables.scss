@@ -28,17 +28,17 @@ $colorWhite: #ffffff;
 $colorDarkGray: #1a1a1a;
 $colorDarkPrimary: #070707;
 $colorDarkSecondary: lighten($colorDarkPrimary, 2.8%);
-$colorAccentPrimary: #8b5cf6;
+$colorAccentPrimary: #6667ab;
 $colorAccentGradient: linear-gradient(
   135deg,
-  #8b5cf6,
-  #8958f5,
-  #8753f4,
-  #844ef2,
-  #824af1,
-  #8045f0,
-  #7e3fee,
-  #7c3aed
+  #6667ab,
+  #6765a9,
+  #6863a7,
+  #6961a5,
+  #6a5fa3,
+  #6a5da0,
+  #6b5b9e,
+  #6c599c
 );
 
 // Transitions

@@ -73,7 +73,7 @@
       }
 
       &:active {
-        color: saturate($colorAccentPrimary, 15%);
+        color: darken($colorAccentPrimary, 15%);
       }
     }
   }
