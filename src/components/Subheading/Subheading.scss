@@ -1,0 +1,15 @@
+// Subheading
+@import '@assets/styles/utils/variables';
+@import '@assets/styles/utils/mixins';
+
+.subheading {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @include respond-max(sm) {
+    & {
+      font-size: 1.25rem;
+    }
+  }
+}

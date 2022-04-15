@@ -6,6 +6,7 @@ import { useNav } from '@hooks/useNav'
 import './Works.scss'
 import { worksData } from './worksData'
 import Container from '@components/Container/Container'
+import Heading from '@components/Heading/Heading'
 import Card from '@components/Card/Card'
 import Button from '@components/Button/Button'
 import IconPlus from '@assets/images/svg/plus.svg'
@@ -58,9 +59,7 @@ const Works = () => {
   return (
     <section className="works section" id="worksSection" ref={worksRef}>
       <Container>
-        <h3 className="section__heading" id="worksHeading">
-          My works
-        </h3>
+        <Heading id="worksHeading">My works</Heading>
         <div className="works__content d-g">
           <div className="works__items d-g">
             {worksData.slice(0, itemsToShow).map((workItem, idx) => (

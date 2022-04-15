@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import ButtonLink from '@components/Button/ButtonLink'
+import Button from '@components/Button/Button'
 import './Social.scss'
 import { socialData } from './socialData'
 
@@ -28,9 +28,15 @@ const Social = () => {
     <ul className="social d-f jc-c">
       {socialData.map((socialLink, idx) => (
         <li className="social__item" key={idx}>
-          <ButtonLink type="icon" href={socialLink.href} target="_blank" rel="noreferrer noopener">
+          <Button
+            as="a"
+            type="icon"
+            href={socialLink.href}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             {socialLink.icon}
-          </ButtonLink>
+          </Button>
         </li>
       ))}
     </ul>

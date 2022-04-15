@@ -5,6 +5,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useNav } from '@hooks/useNav'
 import './Skills.scss'
 import Container from '@components/Container/Container'
+import Heading from '@components/Heading/Heading'
+import Subheading from '@components/Subheading/Subheading'
+import Paragraph from '@components/Paragraph/Paragraph'
 import IconJS from '@assets/images/svg/js.svg'
 import IconReact from '@assets/images/svg/react.svg'
 import IconNode from '@assets/images/svg/node.svg'
@@ -78,17 +81,15 @@ const Skills = () => {
   return (
     <section className="skills section" id="skillsSection" ref={skillsRef}>
       <Container>
-        <h3 className="section__heading" id="skillsHeading">
-          Skills
-        </h3>
+        <Heading id="skillsHeading">Skills</Heading>
         <div className="skills__inner d-g">
           <div className="skills__col skills__col--charts d-f fd-c">
             {skillsChartData.map((skillChart, idx) => (
               <div className="skills__item" key={idx}>
-                <h4 className="skills__subject d-if ai-c">
+                <Subheading className="skills__subject d-if ai-c">
                   {skillChart.icon}
                   <span className="skills__chartName">{skillChart.name}</span>
-                </h4>
+                </Subheading>
                 <div className="skills__progress">
                   <div
                     className="skills__progressBar"
@@ -101,12 +102,12 @@ const Skills = () => {
           </div>
 
           <div className="skills__col" id="skillsText">
-            <h4 className="skills__subheading section__subheading">Other skills:</h4>
-            <p className="skills__text section__text">
+            <Subheading variant="centered">Other skills:</Subheading>
+            <Paragraph>
               Responsive and adaptive design, BEM, HTML, CSS, TailwindCSS, Bootstrap, Bulma, EJS,
               Pug (Jade), SASS/SCSS, PostCSS, NPM, Yarn, Gulp, Webpack, Git, Figma, Adobe Photoshop,
               Atlassian Jira.
-            </p>
+            </Paragraph>
           </div>
         </div>
       </Container>

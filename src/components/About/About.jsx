@@ -5,6 +5,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useNav } from '@hooks/useNav'
 import './About.scss'
 import Container from '@components/Container/Container'
+import Heading from '@components/Heading/Heading'
+import Paragraph from '@components/Paragraph/Paragraph'
 import ownerPhoto from '@assets/images/content/owner-photo.jpg?as=webp'
 
 const About = () => {
@@ -74,24 +76,20 @@ const About = () => {
   return (
     <section className="about section" id="aboutSection" ref={aboutRef}>
       <Container>
-        <h3 className="section__heading" id="aboutHeading">
-          About me
-        </h3>
+        <Heading id="aboutHeading">About me</Heading>
         <div className="about__inner d-f ai-c">
-          <picture className="about__imgWrapper" id="aboutImg">
+          <div className="about__imgWrapper" id="aboutImg">
             <img
               className="about__img"
               src={ownerPhoto}
               alt="Photo of Valentine Samoylov"
               loading="lazy"
             />
-          </picture>
+          </div>
 
           <div className="about__col">
             {paragraphs.map((paragraph, idx) => (
-              <p className="about__text section__text" key={idx}>
-                {paragraph.text}
-              </p>
+              <Paragraph key={idx}>{paragraph.text}</Paragraph>
             ))}
           </div>
         </div>

@@ -5,11 +5,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useNav } from '@hooks/useNav'
 import './Hero.scss'
 import Container from '@components/Container/Container'
-import ButtonLink from '../Button/ButtonLink'
+import Button from '../Button/Button'
 import IconArrowRight from '@assets/images/svg/arrow-right-long.svg'
 import bgImage from '@assets/images/bg/bg.png?as=webp'
 
 const buttonProps = {
+  as: 'a',
   type: 'primary',
   variant: 'reversed',
   href: '#aboutSection',
@@ -57,10 +58,10 @@ const Hero = () => {
             <span className="hero__details">Front-end developer</span>
             <span className="hero__details">Odesa, Ukraine</span>
           </h2>
-          <ButtonLink {...buttonProps} onClick={handleClick}>
+          <Button as="a" {...buttonProps} onClick={handleClick}>
             <IconArrowRight />
             Find out more
-          </ButtonLink>
+          </Button>
         </div>
         <a className="hero__scrollIcon" href="#aboutSection" onClick={handleClick}></a>
       </Container>

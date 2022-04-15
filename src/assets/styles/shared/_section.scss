@@ -5,58 +5,9 @@
     background-color: $colorDarkSecondary;
   }
 
-  &__heading,
-  &__subheading {
-    text-align: center;
-  }
-
-  &__heading {
-    margin: 0 0 3rem;
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  &__subheading {
-    margin: 0 0 1.5rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-
-  &__text {
-    margin: 0;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    text-align: justify;
-    color: rgba($colorWhite, 0.6);
-
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  @include respond-max(lg) {
-    &__text {
-      font-size: 1rem;
-    }
-  }
-
   @include respond-max(md) {
     & {
       padding: 5rem 0;
-    }
-
-    &__heading {
-      margin-bottom: 2.5rem;
-    }
-  }
-
-  @include respond-max(sm) {
-    &__heading {
-      font-size: 1.75rem;
-    }
-
-    &__text {
-      text-align: center;
     }
   }
 

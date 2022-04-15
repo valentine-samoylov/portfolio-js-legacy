@@ -3,11 +3,13 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useNav } from '@hooks/useNav'
-import ButtonLink from '@components/Button/ButtonLink'
 import Container from '@components/Container/Container'
+import Heading from '@components/Heading/Heading'
+import Button from '@components/Button/Button'
 import IconDownload from '@assets/images/svg/download.svg'
 
 const buttonProps = {
+  as: 'a',
   type: 'primary',
   variant: 'centered',
   href: 'https://drive.google.com/uc?id=11gdTeugEQrxj56uDZ_g45hxbUIziW1cf&export=download',
@@ -36,13 +38,11 @@ const Download = () => {
   return (
     <section className="section" id="downloadSection" ref={downloadRef}>
       <Container>
-        <h3 className="section__heading" id="downloadHeading">
-          Download CV
-        </h3>
-        <ButtonLink download {...buttonProps}>
+        <Heading id="downloadHeading">Download CV</Heading>
+        <Button download {...buttonProps}>
           <IconDownload />
           Download
-        </ButtonLink>
+        </Button>
       </Container>
     </section>
   )

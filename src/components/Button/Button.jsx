@@ -2,15 +2,22 @@
 import { buttonProps } from './buttonProps'
 import './Button.scss'
 
-const ButtonLink = ({ children, type, variant, ...props }) => {
+const Button = ({ children, as, type, variant, href, ...props }) => {
+  const classes = `button ${buttonProps.type[type] || ''} ${buttonProps.variant[variant] || ''}`
+
   return (
-    <button
-      className={`button ${buttonProps.type[type]} ${buttonProps.variant[variant]}`}
-      {...props}
-    >
-      {children}
-    </button>
+    <>
+      {as === 'a' ? (
+        <a className={classes} href={href || '#'} {...props}>
+          {children}
+        </a>
+      ) : (
+        <button className={classes} {...props}>
+          {children}
+        </button>
+      )}
+    </>
   )
 }
 
-export default ButtonLink
+export default Button

@@ -4,8 +4,12 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useNav } from '@hooks/useNav'
 import './Contacts.scss'
+import Container from '@components/Container/Container'
+import Heading from '@components/Heading/Heading'
+import Subheading from '@components/Subheading/Subheading'
+
 import Social from '@components/Social/Social'
-import ButtonLink from '@components/Button/ButtonLink'
+import Button from '@components/Button/Button'
 import { contactsData } from './contactsData'
 
 const Contacts = () => {
@@ -41,27 +45,25 @@ const Contacts = () => {
 
   return (
     <section className="contacts section ta-c" id="contactsSection" ref={contactRef}>
-      <div className="container">
-        <h3 className="section__heading" id="contactsHeading">
-          Get in touch
-        </h3>
+      <Container>
+        <Heading id="contactsHeading">Get in touch</Heading>
         <div className="contacts__inner">
-          <h4 className="section__subheading">
+          <Subheading variant="centered">
             Feel free to contact me in any of the following ways:
-          </h4>
+          </Subheading>
           <ul className="contacts__list">
             {contactsData.map((contact, idx) => (
               <li className="contacts__item" key={idx}>
-                <ButtonLink type="tertiary" href={contact.href}>
+                <Button as="a" type="tertiary" href={contact.href}>
                   {contact.icon}
                   {contact.text}
-                </ButtonLink>
+                </Button>
               </li>
             ))}
           </ul>
         </div>
         <Social />
-      </div>
+      </Container>
     </section>
   )
 }

@@ -22,9 +22,9 @@
   }
 
   &__subject {
-    margin: 0 0 0.75rem;
-    font-size: 1.5rem;
-    font-weight: 500;
+    &.subheading {
+      margin: 0 0 0.75rem;
+    }
 
     svg {
       margin-right: 0.5em;
