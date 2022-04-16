@@ -1,15 +1,9 @@
-import React from 'react'
+// App
 import './App.scss'
 import HomePage from '@pages/HomePage'
 
-class App extends React.Component {
-  render() {
-    return (
-      <>
-        <HomePage />
-      </>
-    )
-  }
+const App = () => {
+  return <HomePage />
 }
 
 export default App
