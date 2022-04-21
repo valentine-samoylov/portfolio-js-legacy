@@ -7,7 +7,7 @@ import './Hero.scss'
 import Container from '@components/Container/Container'
 import Button from '../Button/Button'
 import IconArrowRight from '@assets/images/svg/arrow-right-long.svg'
-import bgImage from '@assets/images/bg/bg.jpg?as=webp'
+import bgImage from '@assets/images/bg/bg.png?as=webp'
 
 const buttonProps = {
   as: 'a',
