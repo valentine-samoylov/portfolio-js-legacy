@@ -1,9 +1,9 @@
 // Header
 import { useEffect, useState, useRef } from 'react'
-import './Header.scss'
-import Container from '@components/Container/Container'
-import Nav from '@components/Nav/Nav'
-import ScrollIndicator from '@components/ScrollIndicator/ScrollIndicator'
+import './index.scss'
+import Container from '@components/Container'
+import Nav from '@components/Nav'
+import ScrollIndicator from '@components/ScrollIndicator'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)

@@ -1,5 +1,5 @@
 // Subheading
-import './Subheading.scss'
+import './index.scss'
 
 const subheadingProps = {
   variant: {

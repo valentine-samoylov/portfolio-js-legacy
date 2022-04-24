@@ -1,6 +1,18 @@
 // Button
-import { buttonProps } from './buttonProps'
-import './Button.scss'
+import './index.scss'
+
+const buttonProps = {
+  type: {
+    primary: 'button--primary',
+    tertiary: 'button--tertiary',
+    icon: 'button--icon',
+  },
+
+  variant: {
+    reversed: 'button--reversed',
+    centered: 'button--centered',
+  },
+}
 
 const Button = ({ children, as, type, variant, href, ...props }) => {
   const classes = `button ${buttonProps.type[type] || ''} ${buttonProps.variant[variant] || ''}`

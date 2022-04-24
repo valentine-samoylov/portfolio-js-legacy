@@ -1,8 +1,8 @@
 // Nav
 import { useState } from 'react'
-import './Nav.scss'
-import NavLink from '@components/NavLink/NavLink'
-import { navLinks } from './navLinks'
+import './index.scss'
+import NavLink from '@components/NavLink'
+import { navLinks } from '@data'
 import useScrollLock from '@hooks/useScrollLock'
 
 const Nav = () => {

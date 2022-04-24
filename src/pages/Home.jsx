@@ -1,14 +1,14 @@
 // HomePage
 import { useEffect } from 'react'
-import Header from '@components/Header/Header'
-import Hero from '@components/Hero/Hero'
-import About from '@components/About/About'
-import Skills from '@components/Skills/Skills'
-import Works from '@components/Works/Works'
-import Download from '@components/Download/Download'
-import Contacts from '@components/Contacts/Contacts'
-import Footer from '@components/Footer/Footer'
-import NavProvider from '@context/NavContext'
+import Header from '@components/Header'
+import Hero from '@components/Hero'
+import About from '@components/About'
+import Skills from '@components/Skills'
+import Works from '@components/Works'
+import Download from '@components/Download'
+import Contacts from '@components/Contacts'
+import Footer from '@components/Footer'
+import ContextProviders from '@context/NavContext'
 import setDynamicVH from '@utils/setDynamicVH'
 
 const HomePage = () => {
@@ -24,7 +24,7 @@ const HomePage = () => {
 
   return (
     <>
-      <NavProvider>
+      <ContextProviders>
         <Header />
         <main className="main">
           <Hero />
@@ -35,7 +35,7 @@ const HomePage = () => {
           <Contacts />
         </main>
         <Footer />
-      </NavProvider>
+      </ContextProviders>
     </>
   )
 }

@@ -1,5 +1,5 @@
 // Heading
-import './Heading.scss'
+import './index.scss'
 
 const Heading = (props) => {
   return (

@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const paths = require('./paths')
-const globals = require('../src/globals/globals')
+const globals = require('../src/globals')
 
 module.exports = {
   entry: [`${paths.src}/index.js`],
@@ -67,6 +67,7 @@ module.exports = {
       '@hooks': `${paths.src}/hooks`,
       '@pages': `${paths.src}/pages`,
       '@utils': `${paths.src}/utils`,
+      '@data': `${paths.src}/data`,
       assets: paths.public,
     },
   },

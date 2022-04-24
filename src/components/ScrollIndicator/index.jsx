@@ -1,6 +1,6 @@
 // ScrollIndicator
 import { useState, useEffect } from 'react'
-import './ScrollIndicator.scss'
+import './index.scss'
 
 const ScrollIndicator = () => {
   const [scroll, setScroll] = useState(0)
