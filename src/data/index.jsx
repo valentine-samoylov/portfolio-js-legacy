@@ -1,5 +1,4 @@
 // Data
-
 import previewLuxuryHotels from '@/assets/images/content/preview-luxury-hotels.jpg?as=webp'
 import previewMountain from '@/assets/images/content/preview-mountain.jpg?as=webp'
 import previewPorten from '@/assets/images/content/preview-porten.jpg?as=webp'
