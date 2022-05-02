@@ -1,6 +1,6 @@
 // Button
-@import '@assets/styles/utils/variables';
-@import '@assets/styles/utils/mixins';
+@import '@/assets/styles/utils/variables';
+@import '@/assets/styles/utils/mixins';
 
 .button {
   position: relative;
@@ -26,13 +26,13 @@
 
   &--primary {
     padding: 1em 2em;
-    background-image: $colorAccentGradient;
+    background-color: $colorAccentPrimary;
     border-radius: 3em;
     font-weight: 700;
 
     @include respond-min(md) {
       &:hover {
-        box-shadow: 0 0.222rem 0.833rem 0 saturate($colorAccentPrimary, 20%);
+        background-color: darken($colorAccentPrimary, 15%);
       }
 
       &:focus {

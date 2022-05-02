@@ -1,7 +1,7 @@
 // Card (Works card)
 import './index.scss'
-import IconView from '@assets/images/svg/view.svg'
-import IconCode from '@assets/images/svg/code.svg'
+import IconView from '@/assets/images/svg/view.svg'
+import IconCode from '@/assets/images/svg/code.svg'
 
 const Card = (props) => {
   return (

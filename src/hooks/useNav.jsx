@@ -1,7 +1,7 @@
 // useNav Hook
 import { useRef, useContext, useEffect } from 'react'
 import { useOnScreen } from './useOnScreen'
-import { NavContext } from '@context/NavContext'
+import { NavContext } from '@/context/NavContext'
 
 export const useNav = (navLinkId) => {
   const ref = useRef(null)

@@ -1,7 +1,7 @@
 // Footer
 import './index.scss'
-import Container from '@components/Container'
-import IconHeart from '@assets/images/svg/heart.svg'
+import Container from '@/components/Container'
+import IconHeart from '@/assets/images/svg/heart.svg'
 
 const Footer = () => {
   return (

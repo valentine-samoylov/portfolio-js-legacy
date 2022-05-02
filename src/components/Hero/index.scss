@@ -1,7 +1,7 @@
 // Hero
-@import '@assets/styles/utils/variables';
-@import '@assets/styles/utils/mixins';
-@import '@assets/styles/animations/animations';
+@import '@/assets/styles/utils/variables';
+@import '@/assets/styles/utils/mixins';
+@import '@/assets/styles/animations/animations';
 
 .hero {
   min-height: var(--dynamic-vh);

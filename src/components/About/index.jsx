@@ -2,12 +2,12 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useNav } from '@hooks/useNav'
+import { useNav } from '@/hooks/useNav'
 import './index.scss'
-import Container from '@components/Container'
-import Heading from '@components/Heading'
-import Paragraph from '@components/Paragraph'
-import ownerPhoto from '@assets/images/content/owner-photo.jpg?as=webp'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
+import Paragraph from '@/components/Paragraph'
+import ownerPhoto from '@/assets/images/content/owner-photo.jpg?as=webp'
 
 const About = () => {
   const aboutRef = useNav('About')

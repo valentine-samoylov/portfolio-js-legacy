@@ -1,9 +1,9 @@
 // Nav
 import { useState } from 'react'
 import './index.scss'
-import NavLink from '@components/NavLink'
-import { navLinks } from '@data'
-import useScrollLock from '@hooks/useScrollLock'
+import NavLink from '@/components/NavLink'
+import { navLinks } from '@/data'
+import useScrollLock from '@/hooks/useScrollLock'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)

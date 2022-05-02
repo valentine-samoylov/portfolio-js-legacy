@@ -2,15 +2,15 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useNav } from '@hooks/useNav'
+import { useNav } from '@/hooks/useNav'
 import './index.scss'
-import Container from '@components/Container'
-import Heading from '@components/Heading'
-import Subheading from '@components/Subheading'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
+import Subheading from '@/components/Subheading'
 
-import Social from '@components/Social'
-import Button from '@components/Button'
-import { contactsData } from '@data'
+import Social from '@/components/Social'
+import Button from '@/components/Button'
+import { contactsData } from '@/data'
 
 const Contacts = () => {
   const contactRef = useNav('Contacts')

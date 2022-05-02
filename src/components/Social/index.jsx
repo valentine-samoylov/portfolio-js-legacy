@@ -2,9 +2,9 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import Button from '@components/Button'
+import Button from '@/components/Button'
 import './index.scss'
-import { socialData } from '@data'
+import { socialData } from '@/data'
 
 const Social = () => {
   gsap.registerPlugin(ScrollTrigger)

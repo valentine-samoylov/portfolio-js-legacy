@@ -2,15 +2,15 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useNav } from '@hooks/useNav'
+import { useNav } from '@/hooks/useNav'
 import './index.scss'
-import Container from '@components/Container'
-import Heading from '@components/Heading'
-import Subheading from '@components/Subheading'
-import Paragraph from '@components/Paragraph'
-import IconJS from '@assets/images/svg/js.svg'
-import IconReact from '@assets/images/svg/react.svg'
-import IconNode from '@assets/images/svg/node.svg'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
+import Subheading from '@/components/Subheading'
+import Paragraph from '@/components/Paragraph'
+import IconJS from '@/assets/images/svg/js.svg'
+import IconReact from '@/assets/images/svg/react.svg'
+import IconNode from '@/assets/images/svg/node.svg'
 
 const Skills = () => {
   const skillsRef = useNav('Skills')

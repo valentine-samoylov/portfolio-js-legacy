@@ -2,11 +2,11 @@
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useNav } from '@hooks/useNav'
-import Container from '@components/Container'
-import Heading from '@components/Heading'
-import Button from '@components/Button'
-import IconDownload from '@assets/images/svg/download.svg'
+import { useNav } from '@/hooks/useNav'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
+import Button from '@/components/Button'
+import IconDownload from '@/assets/images/svg/download.svg'
 
 const buttonProps = {
   as: 'a',

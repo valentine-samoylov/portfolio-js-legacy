@@ -2,15 +2,15 @@
 import { useState, useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useNav } from '@hooks/useNav'
+import { useNav } from '@/hooks/useNav'
 import './index.scss'
-import { worksData } from '@data'
-import Container from '@components/Container'
-import Heading from '@components/Heading'
-import Card from '@components/Card'
-import Button from '@components/Button'
-import IconPlus from '@assets/images/svg/plus.svg'
-import IconMinus from '@assets/images/svg/minus.svg'
+import { worksData } from '@/data'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
+import Card from '@/components/Card'
+import Button from '@/components/Button'
+import IconPlus from '@/assets/images/svg/plus.svg'
+import IconMinus from '@/assets/images/svg/minus.svg'
 
 const buttonProps = {
   type: 'primary',

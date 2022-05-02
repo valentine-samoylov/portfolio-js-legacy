@@ -1,6 +1,6 @@
 // NavLink
 import { useContext } from 'react'
-import { NavContext } from '@context/NavContext'
+import { NavContext } from '@/context/NavContext'
 import './index.scss'
 
 const NavLink = ({ navLinkId, scrollToId, linkText }) => {
