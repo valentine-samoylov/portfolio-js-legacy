@@ -26,7 +26,11 @@
   }
 
   &__pic {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 16/9;
     transition: transform 0.3s $transitionStyle 0s;
+    overflow: hidden;
 
     &::before {
       position: absolute;
@@ -39,6 +43,10 @@
       transition: background-color 0.3s $transitionStyle 0s;
       content: '';
     }
+  }
+
+  &__img {
+    object-fit: cover;
   }
 
   &__details {

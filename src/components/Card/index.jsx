@@ -6,9 +6,9 @@ import IconCode from '@/assets/images/svg/code.svg'
 const Card = (props) => {
   return (
     <article className="card">
-      <picture className="card__pic ar-16-9 d-b">
+      <picture className="card__pic d-b">
         <img
-          className="card__img"
+          className="img-fl"
           src={props.data.imgSrc}
           alt={`${props.data.title} - ${props.data.text}`}
           loading="lazy"
