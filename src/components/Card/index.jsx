@@ -6,7 +6,7 @@ import IconCode from '@/assets/images/svg/code.svg'
 const Card = (props) => {
   return (
     <article className="card">
-      <picture className="card__pic ar-16-10 d-b">
+      <picture className="card__pic ar-16-9 d-b">
         <img
           className="card__img"
           src={props.data.imgSrc}

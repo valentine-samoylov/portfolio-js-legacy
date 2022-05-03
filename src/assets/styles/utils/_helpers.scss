@@ -77,12 +77,12 @@
   @include img-fluid();
 }
 
-// Aspect ratio 16:10
-.ar-16-10 {
+// Aspect ratio 16:9
+.ar-16-9 {
   position: relative;
   height: 0;
   width: 100%;
-  padding-top: calc((10 / 16) * 100%);
+  padding-top: calc((9 / 16) * 100%);
   overflow: hidden;
 
   & > img {
