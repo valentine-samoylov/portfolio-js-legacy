@@ -3,7 +3,7 @@ module.exports = {
   // SEO
   title: 'Valentine Samoylov - Front-end developer',
   description:
-    'A front-end developer with skills in JavaScript, preprocessors, and adaptive web design looking to work on exciting new projects and meet new people.',
+    'A Front-end developer with knowledge of responsive design, React, JavaScript, preprocessors and web development tools like Webpack and Git. ',
   previewImg: 'assets/og-preview.png',
   url: 'https://valentine-samoylov.vercel.app',
 }

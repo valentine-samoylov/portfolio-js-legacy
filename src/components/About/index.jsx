@@ -7,22 +7,11 @@ import './index.scss'
 import Container from '@/components/Container'
 import Heading from '@/components/Heading'
 import Paragraph from '@/components/Paragraph'
+import { aboutData } from '@/data'
 import ownerPhoto from '@/assets/images/content/owner-photo.jpg?as=webp'
 
 const About = () => {
   const aboutRef = useNav('About')
-
-  const paragraphs = [
-    {
-      text: `My name is Valentine, I am a front-end developer from Odesa, Ukraine. My main interests are web development and creation of modern web sites.`,
-    },
-    {
-      text: `I studied web development at Colt Steele's "Web Developer Bootcamp" and continue to refine my knowledge and skills.`,
-    },
-    {
-      text: `I am looking forward to the opportunity to work on new interesting projects and meet new people.`,
-    },
-  ]
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -88,8 +77,8 @@ const About = () => {
           </div>
 
           <div className="about__col">
-            {paragraphs.map((paragraph, idx) => (
-              <Paragraph key={idx}>{paragraph.text}</Paragraph>
+            {aboutData.map((item, idx) => (
+              <Paragraph key={idx}>{item.paragraph}</Paragraph>
             ))}
           </div>
         </div>
