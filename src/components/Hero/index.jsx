@@ -63,7 +63,7 @@ const Hero = () => {
             Find out more
           </Button>
         </div>
-        <a className="hero__scrollIcon" href="#aboutSection" onClick={handleClick}></a>
+        <a className="hero__scrollDown" href="#aboutSection" onClick={handleClick}></a>
       </Container>
     </section>
   )

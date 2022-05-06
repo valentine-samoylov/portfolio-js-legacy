@@ -39,39 +39,41 @@
     margin-right: 0.3em;
   }
 
-  &__scrollIcon {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    width: 1.5rem;
-    height: 2.5rem;
-    border: 0.125rem solid $colorWhite;
-    border-radius: 0.75rem;
-    transform: translateX(-50%);
-    transition: all 0.3s $transitionStyle 0s;
-
-    &::after {
+  @include respond-min(lg) {
+    &__scrollDown {
       position: absolute;
-      top: 0.5625rem;
-      left: calc(50% - 0.0625rem);
-      width: 0.125rem;
-      height: 0.5rem;
-      background: $colorWhite;
-      border-radius: 0.0625rem;
+      bottom: 2rem;
+      left: 50%;
+      width: 1.5rem;
+      height: 2.5rem;
+      border: 0.125rem solid $colorWhite;
+      border-radius: 0.75rem;
+      transform: translateX(-50%);
       transition: all 0.3s $transitionStyle 0s;
-      content: '';
-      animation-name: scrollDown;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-delay: 2s;
-    }
 
-    &:hover {
-      border-color: $colorAccentPrimary;
-    }
+      &::after {
+        position: absolute;
+        top: 0.5625rem;
+        left: calc(50% - 0.0625rem);
+        width: 0.125rem;
+        height: 0.5rem;
+        background: $colorWhite;
+        border-radius: 0.0625rem;
+        transition: all 0.3s $transitionStyle 0s;
+        content: '';
+        animation-name: scrollDown;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+      }
 
-    &:hover::after {
-      background-color: $colorAccentPrimary;
+      &:hover {
+        border-color: $colorAccentPrimary;
+      }
+
+      &:hover::after {
+        background-color: $colorAccentPrimary;
+      }
     }
   }
 
@@ -88,10 +90,6 @@
   @include respond-max(lg) {
     & {
       min-height: 48rem;
-    }
-
-    &__scrollIcon {
-      display: none;
     }
   }
 

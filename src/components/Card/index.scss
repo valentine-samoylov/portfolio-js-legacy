@@ -4,30 +4,12 @@
 
 .card {
   position: relative;
-  border-radius: 0.5rem;
-  background-color: $colorDarkGray;
   overflow: hidden;
-  will-change: transform;
 
-  @include respond-min(lg) {
-    &:hover {
-      .card__pic {
-        transform: scale(1.02);
-      }
-
-      .card__pic::before {
-        background-color: rgba($colorDarkPrimary, 0.8);
-      }
-
-      .card__details {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__pic {
+  &__header {
     position: relative;
     z-index: 1;
+    border-radius: 0.75rem;
     aspect-ratio: 16/9;
     transition: transform 0.3s $transitionStyle 0s;
     overflow: hidden;
@@ -40,7 +22,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba($colorDarkPrimary, 0.3);
-      transition: background-color 0.3s $transitionStyle 0s;
+      background: linear-gradient(360deg, rgba(0, 0, 0, 70%) 15%, rgba(0, 0, 0, 0) 98.53%);
       content: '';
     }
   }
@@ -49,28 +31,36 @@
     object-fit: cover;
   }
 
-  &__details {
-    padding: 1.5rem;
-    padding: 1rem;
+  &__techStack {
+    position: absolute;
+    z-index: 3;
 
-    @include respond-min(lg) {
-      & {
-        position: absolute;
-        align-items: center;
-        top: 0;
-        left: 0;
-        z-index: 3;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        text-align: center;
-        transition: opacity 0.3s $transitionStyle 0s;
-      }
+    bottom: 0;
+    left: 0;
+    margin: 0 0.5rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  &__techStackItem {
+    padding: 0.55em 0.5em 0.4em;
+    border-radius: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+    background-color: rgba($colorWhite, 0.05);
+    color: rgba($colorWhite, 0.4);
+
+    svg {
+      margin-right: 0.3em;
     }
   }
 
+  &__body {
+    padding: 1rem 0;
+  }
+
   &__title {
-    margin: 0 0 0.75rem;
     margin: 0 0 0.5rem;
 
     font-size: 1.25rem;
@@ -90,24 +80,6 @@
     overflow: hidden;
   }
 
-  &__techStack {
-    margin: 0 0 1.5rem;
-    gap: 0.5rem;
-  }
-
-  &__techStackItem {
-    padding: 0.25em 0.5em;
-    border-radius: 2rem;
-    background-color: rgba($colorWhite, 0.6);
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: $colorDarkGray;
-
-    svg {
-      margin-right: 0.3em;
-    }
-  }
-
   &__link {
     font-weight: 500;
     transition: color 0.3s $transitionStyle 0s;
@@ -125,21 +97,5 @@
 
   &__icon {
     margin-right: 0.5rem;
-
-    @include respond-min(lg) {
-      & {
-        width: 2rem;
-        height: 2rem;
-        margin: 0;
-      }
-    }
-  }
-
-  &__linkText {
-    @include respond-min(lg) {
-      & {
-        display: none;
-      }
-    }
   }
 }
