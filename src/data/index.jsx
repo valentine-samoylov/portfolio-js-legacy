@@ -41,7 +41,15 @@ export const heroData = {
 export const aboutData = [
   {
     paragraph:
-      'My name is Valentine, I am a front-end developer from Odesa, Ukraine. I like to learn new technologies and improve my skills to create awesome web apps and webpages. I studied web development by myself and continue to improve my knowledge and skills. I am looking forward to working on new, interesting projects and meeting new people.',
+      'My name is Valentine, I am a front-end developer from Odesa, Ukraine. I like to learn new technologies and improve my skills to create awesome web applications and web pages.',
+  },
+  {
+    paragraph:
+      'I am looking for a job in an IT company to be a part of its team, work on new, interesting projects and grow professionally together.',
+  },
+  {
+    paragraph:
+      'If I were to describe myself in one sentence, it would be a versatile outgoing guy, an admirer of good music and movies, and a technology enthusiast.',
   },
 ]
 
