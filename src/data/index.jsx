@@ -53,7 +53,7 @@ export const skillsData = {
     { name: 'React', icon: <IconReact />, progressed: '35%' },
   ],
   otherSkills:
-    'Responsive and adaptive design, BEM, HTML, CSS, TailwindCSS, Bootstrap, Bulma, EJS, Pug (Jade), SASS/SCSS, PostCSS, Node.js, NPM, Yarn, Webpack, Gulp, Git, Figma, Adobe Photoshop, Atlassian Jira.',
+    'Responsive and adaptive design, BEM, HTML, CSS, TailwindCSS, Bootstrap, Bulma, EJS, Pug (Jade), SASS/SCSS, PostCSS, Node.js, NPM, Yarn, Webpack, Gulp, Git, Postman, Figma, Adobe Photoshop, Atlassian Jira.',
 }
 
 // worksData
