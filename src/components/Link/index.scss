@@ -1,9 +1,8 @@
-// Button
+// Link
 @import '@/assets/styles/utils/variables';
 @import '@/assets/styles/utils/mixins';
 
-.button {
-  position: relative;
+.link {
   display: inline-flex;
   align-items: center;
   max-width: fit-content;
@@ -18,14 +17,26 @@
   }
 
   &--primary {
-    padding: 1em 2em;
-    background-color: $colorAccentPrimary;
-    border-radius: 3em;
-    font-weight: 700;
+    padding: 0 0.2em;
+    color: rgba($colorWhite, 0.6);
+    font-weight: 400;
+  }
+
+  &--icon {
+    font-size: 2rem;
+
+    svg {
+      margin: 0;
+    }
+  }
+
+  &--primary,
+  &--icon {
+    border-radius: 0.25rem;
 
     @include respond-min(md) {
       &:hover {
-        background-color: darken($colorAccentPrimary, 15%);
+        color: $colorAccentPrimary;
       }
 
       &:focus {
@@ -33,21 +44,8 @@
       }
 
       &:active {
-        box-shadow: inset 0px 0.1875rem 0.25rem rgba($colorDarkPrimary, 0.5);
+        color: darken($colorAccentPrimary, 15%);
       }
     }
-  }
-
-  &--reversed {
-    svg {
-      order: 1;
-      margin: 0 0 0 0.5em;
-    }
-  }
-
-  &--centered {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

@@ -4,8 +4,6 @@ import './index.scss'
 const buttonProps = {
   type: {
     primary: 'button--primary',
-    tertiary: 'button--tertiary',
-    icon: 'button--icon',
   },
 
   variant: {

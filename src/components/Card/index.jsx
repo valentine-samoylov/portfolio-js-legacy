@@ -1,5 +1,6 @@
 // Card (Works card)
 import './index.scss'
+import Link from '@/components/Link'
 import IconView from '@/assets/images/svg/view.svg'
 import IconCode from '@/assets/images/svg/code.svg'
 
@@ -27,14 +28,14 @@ const Card = (props) => {
         <p className="card__text">{props.data.text}</p>
 
         <div className="card__links d-f">
-          <a className="card__link d-f ai-c" target="_blank" href={props.data.hrefDemo}>
+          <Link type="primary" target="_blank" href={props.data.hrefDemo}>
             <IconView className="card__icon" title="Live demo" />
             <span className="card__linkText">Demo</span>
-          </a>
-          <a className="card__link d-f ai-c" target="_blank" href={props.data.hrefRepo}>
+          </Link>
+          <Link type="primary" target="_blank" href={props.data.hrefRepo}>
             <IconCode className="card__icon" title="Browse code" />
             <span className="card__linkText">Code</span>
-          </a>
+          </Link>
         </div>
       </div>
     </article>

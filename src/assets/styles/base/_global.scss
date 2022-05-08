@@ -2,12 +2,6 @@
 :root {
   --dynamic-vh: 100vh;
 
-  @include respond-max(xl) {
-    & {
-      font-size: 16px;
-    }
-  }
-
   @include respond-max(sm) {
     & {
       --item-mx-w: 75%;
@@ -60,10 +54,10 @@ li {
   list-style: none;
 }
 
-a {
+a,
+button {
+  all: unset;
   display: inline-block;
-  color: inherit;
-  text-decoration: none;
 }
 
 svg {

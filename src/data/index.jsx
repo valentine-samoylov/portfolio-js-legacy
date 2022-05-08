@@ -45,7 +45,7 @@ export const aboutData = [
   },
   {
     paragraph:
-      'I am looking for a job in an IT company to be a part of its team, work on new, interesting projects and grow professionally together.',
+      'I am looking for a career in an IT company to be part of its team, to work on new, interesting projects and to grow professionally together,am looking for a job in an IT company to be a part of its team, work on new, interesting projects and grow professionally together.',
   },
   {
     paragraph:

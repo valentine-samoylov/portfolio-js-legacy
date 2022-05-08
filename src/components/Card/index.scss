@@ -3,9 +3,6 @@
 @import '@/assets/styles/utils/mixins';
 
 .card {
-  position: relative;
-  overflow: hidden;
-
   &__header {
     position: relative;
     z-index: 1;
@@ -80,22 +77,7 @@
     overflow: hidden;
   }
 
-  &__link {
-    font-weight: 500;
-    transition: color 0.3s $transitionStyle 0s;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-
-    @include respond-min(md) {
-      &:hover {
-        color: $colorAccentPrimary;
-      }
-    }
-  }
-
-  &__icon {
-    margin-right: 0.5rem;
+  &__links {
+    gap: 0.5rem;
   }
 }

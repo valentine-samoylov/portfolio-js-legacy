@@ -7,9 +7,8 @@ import './index.scss'
 import Container from '@/components/Container'
 import Heading from '@/components/Heading'
 import Subheading from '@/components/Subheading'
-
 import Social from '@/components/Social'
-import Button from '@/components/Button'
+import Link from '@/components/Link'
 import { contactsData } from '@/data'
 
 const Contacts = () => {
@@ -54,10 +53,10 @@ const Contacts = () => {
           <ul className="contacts__list">
             {contactsData.map((contact, idx) => (
               <li className="contacts__item" key={idx}>
-                <Button as="a" type="tertiary" href={contact.href}>
+                <Link type="primary" href={contact.href}>
                   {contact.icon}
                   {contact.text}
-                </Button>
+                </Link>
               </li>
             ))}
           </ul>
