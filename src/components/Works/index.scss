@@ -24,7 +24,7 @@
 
   @include respond-max(xs) {
     &__items {
-      grid-template-columns: minmax(auto, 18.125rem);
+      grid-template-columns: minmax(auto, 20rem);
     }
   }
 }

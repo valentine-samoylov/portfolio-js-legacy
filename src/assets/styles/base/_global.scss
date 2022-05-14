@@ -10,7 +10,7 @@
 
   @include respond-max(xs) {
     & {
-      --item-mx-w: 320px;
+      --item-mx-w: 20rem;
     }
   }
 }
