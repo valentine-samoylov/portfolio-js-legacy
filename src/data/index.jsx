@@ -102,7 +102,7 @@ export const worksData = [
   {
     imgSrc: previewKrypto,
     title: 'Krypto',
-    text: 'Cryptocurrency trading page',
+    text: 'Cryptocurrency page using CoinGecko API and Axios.',
     stack: [tech[3], tech[4], tech[5]],
     hrefDemo: 'https://krypto-trading.vercel.app/',
     hrefRepo: 'https://github.com/valentine-samoylov/krypto-trading',
