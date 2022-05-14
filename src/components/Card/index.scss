@@ -23,7 +23,6 @@
       width: 100%;
       height: 100%;
       background-color: rgba($colorDarkPrimary, 0.3);
-      background: linear-gradient(360deg, rgba(0, 0, 0, 70%) 15%, rgba(0, 0, 0, 0) 98.53%);
       content: '';
     }
   }
@@ -33,12 +32,7 @@
   }
 
   &__techStack {
-    position: absolute;
-    z-index: 3;
-
-    bottom: 0;
-    left: 0;
-    margin: 0 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
     gap: 0.5rem;
   }
 
@@ -48,8 +42,7 @@
     font-size: 0.7rem;
     font-weight: 500;
     line-height: 1;
-    backdrop-filter: blur(10px);
-    background-color: rgba($colorWhite, 0.05);
+    background-color: $colorDarkGray;
     color: rgba($colorWhite, 0.6);
 
     svg {

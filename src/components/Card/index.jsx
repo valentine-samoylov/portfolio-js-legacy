@@ -14,6 +14,16 @@ const Card = (props) => {
           alt={`${props.data.title} - ${props.data.text}`}
           loading="lazy"
         />
+        {/* <ul className="card__techStack d-f fxw-w">
+          {props.data.stack.map((stackItem, idn) => (
+            <li className="card__techStackItem d-f ai-c" key={idn}>
+              {stackItem.icon}
+              <span>{stackItem.text}</span>
+            </li>
+          ))}
+        </ul> */}
+      </div>
+      <div className="card__body">
         <ul className="card__techStack d-f fxw-w">
           {props.data.stack.map((stackItem, idn) => (
             <li className="card__techStackItem d-f ai-c" key={idn}>
@@ -22,8 +32,6 @@ const Card = (props) => {
             </li>
           ))}
         </ul>
-      </div>
-      <div className="card__body">
         <h4 className="card__title">{props.data.title}</h4>
         <p className="card__text">{props.data.text}</p>
       </div>
