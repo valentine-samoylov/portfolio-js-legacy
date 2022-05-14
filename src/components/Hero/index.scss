@@ -44,10 +44,11 @@
       position: absolute;
       bottom: 2rem;
       left: 50%;
-      width: 1.5rem;
+      width: 1.25rem;
       height: 2.5rem;
       border: 0.125rem solid $colorWhite;
       border-radius: 0.75rem;
+      border-radius: 12px;
       transform: translateX(-50%);
       transition: all 0.3s $transitionStyle 0s;
 

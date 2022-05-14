@@ -7,7 +7,7 @@ import IconCode from '@/assets/images/svg/code.svg'
 const Card = (props) => {
   return (
     <article className="card">
-      <div className="card__header d-b">
+      <div className="card__header">
         <img
           className="img-fl"
           src={props.data.imgSrc}
@@ -23,20 +23,19 @@ const Card = (props) => {
           ))}
         </ul>
       </div>
-      <div className="card__body d-f fd-c jc-c">
+      <div className="card__body">
         <h4 className="card__title">{props.data.title}</h4>
         <p className="card__text">{props.data.text}</p>
-
-        <div className="card__links d-f">
-          <Link type="primary" target="_blank" href={props.data.hrefDemo}>
-            <IconView className="card__icon" title="Live demo" />
-            <span className="card__linkText">Demo</span>
-          </Link>
-          <Link type="primary" target="_blank" href={props.data.hrefRepo}>
-            <IconCode className="card__icon" title="Browse code" />
-            <span className="card__linkText">Code</span>
-          </Link>
-        </div>
+      </div>
+      <div className="card__footer d-f">
+        <Link type="primary" target="_blank" href={props.data.hrefDemo}>
+          <IconView className="card__icon" title="Live demo" />
+          <span className="card__linkText">Demo</span>
+        </Link>
+        <Link type="primary" target="_blank" href={props.data.hrefRepo}>
+          <IconCode className="card__icon" title="Browse code" />
+          <span className="card__linkText">Code</span>
+        </Link>
       </div>
     </article>
   )
