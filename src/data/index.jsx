@@ -14,7 +14,6 @@ import IconPhone from '@/assets/images/svg/phone.svg'
 import IconMail from '@/assets/images/svg/mail.svg'
 import IconGitHub from '@/assets/images/svg/github.svg'
 import IconLinkedIn from '@/assets/images/svg/linkedin.svg'
-import IconDjinni from '@/assets/images/svg/djinni.svg'
 import IconSkype from '@/assets/images/svg/skype.svg'
 import IconTelegram from '@/assets/images/svg/telegram.svg'
 import IconInstagram from '@/assets/images/svg/instagram.svg'
@@ -132,10 +131,6 @@ export const socialData = [
   {
     href: 'https://www.linkedin.com/in/valentine-samoylov/',
     icon: <IconLinkedIn title="LinkedIn" />,
-  },
-  {
-    href: 'https://djinni.co/q/b6b6809bf5/',
-    icon: <IconDjinni title="Djinni" />,
   },
   {
     href: 'https://join.skype.com/invite/fjnLBWvnMhpk',
