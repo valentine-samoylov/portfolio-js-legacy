@@ -95,10 +95,6 @@
   }
 
   @include respond-max(md) {
-    & {
-      min-height: 35.5rem;
-    }
-
     &__title {
       font-size: 4rem;
     }
@@ -112,14 +108,6 @@
     &__inner {
       margin: 0 auto;
       text-align: center;
-    }
-
-    &__title {
-      font-size: 4rem;
-    }
-
-    &__subtitle {
-      font-size: 1.5rem;
     }
   }
 
