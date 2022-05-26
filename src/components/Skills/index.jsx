@@ -8,7 +8,17 @@ import Container from '@/components/Container'
 import Heading from '@/components/Heading'
 import Subheading from '@/components/Subheading'
 import Paragraph from '@/components/Paragraph'
-import { skillsData } from '@/data'
+import data from '@/db'
+import IconJS from '@/assets/images/svg/js.svg'
+import IconTS from '@/assets/images/svg/ts.svg'
+import IconReact from '@/assets/images/svg/react.svg'
+
+const skillsIcons = [{ icon: <IconJS /> }, { icon: <IconTS /> }, { icon: <IconReact /> }]
+
+const skillsSummaryData = data.skills.summary.map((item, idx) => ({
+  ...item,
+  ...skillsIcons[idx],
+}))
 
 const Skills = () => {
   const skillsRef = useNav('Skills')
@@ -73,10 +83,10 @@ const Skills = () => {
   return (
     <section className="skills section" id="skillsSection" ref={skillsRef}>
       <Container>
-        <Heading id="skillsHeading">Skills</Heading>
+        <Heading id="skillsHeading">{data.skills.heading}</Heading>
         <div className="skills__inner d-g">
           <div className="skills__col skills__col--charts d-f fd-c">
-            {skillsData.mainSkills.map((skill, idx) => (
+            {skillsSummaryData.map((skill, idx) => (
               <div className="skills__item" key={idx}>
                 <Subheading className="skills__subject d-if ai-c">
                   {skill.icon}
@@ -91,8 +101,8 @@ const Skills = () => {
           </div>
 
           <div className="skills__col" id="skillsText">
-            <Subheading variant="centered">Other skills:</Subheading>
-            <Paragraph>{skillsData.otherSkills}</Paragraph>
+            <Subheading variant="centered">{data.skills.subheading}</Subheading>
+            <Paragraph>{data.skills.other}</Paragraph>
           </div>
         </div>
       </Container>

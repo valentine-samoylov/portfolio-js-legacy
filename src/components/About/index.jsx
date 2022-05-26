@@ -7,7 +7,7 @@ import './index.scss'
 import Container from '@/components/Container'
 import Heading from '@/components/Heading'
 import Paragraph from '@/components/Paragraph'
-import { aboutData } from '@/data'
+import data from '@/db'
 import ownerPhoto from '@/assets/images/content/owner-photo.jpg?as=webp'
 
 const About = () => {
@@ -65,7 +65,7 @@ const About = () => {
   return (
     <section className="about section" id="aboutSection" ref={aboutRef}>
       <Container>
-        <Heading id="aboutHeading">About me</Heading>
+        <Heading id="aboutHeading">{data.about.heading}</Heading>
         <div className="about__inner d-f ai-c">
           <div className="about__imgWrapper" id="aboutImg">
             <img
@@ -77,8 +77,8 @@ const About = () => {
           </div>
 
           <div className="about__col">
-            {aboutData.map((item, idx) => (
-              <Paragraph key={idx}>{item.paragraph}</Paragraph>
+            {data.about.description.map((item, idx) => (
+              <Paragraph key={idx}>{item.text}</Paragraph>
             ))}
           </div>
         </div>

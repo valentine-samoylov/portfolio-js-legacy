@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './index.scss'
 import NavLink from '@/components/NavLink'
-import { navLinks } from '@/data'
+import data from '@/db'
 import useScrollLock from '@/hooks/useScrollLock'
 
 const Nav = () => {
@@ -41,7 +41,7 @@ const Nav = () => {
 
       <div className={`nav__body ${isOpen ? 'isOpen' : ''}`}>
         <ul className="nav__links d-f">
-          {navLinks.map(({ navLinkId, targetId, linkText }, idx) => (
+          {data.navLinks.map(({ navLinkId, targetId, linkText }, idx) => (
             <li className="nav__item" onClick={toggle} onBlur={hide} onFocus={show} key={idx}>
               <NavLink navLinkId={navLinkId} targetId={targetId} linkText={linkText} />
             </li>

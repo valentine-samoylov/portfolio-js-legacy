@@ -3,9 +3,36 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Link from '@/components/Link'
-
 import './index.scss'
-import { socialData } from '@/data'
+import data from '@/db'
+import IconGitHub from '@/assets/images/svg/github.svg'
+import IconLinkedIn from '@/assets/images/svg/linkedin.svg'
+import IconSkype from '@/assets/images/svg/skype.svg'
+import IconTelegram from '@/assets/images/svg/telegram.svg'
+import IconInstagram from '@/assets/images/svg/instagram.svg'
+
+const socialIcons = [
+  {
+    icon: <IconGitHub title="GitHub" />,
+  },
+  {
+    icon: <IconLinkedIn title="LinkedIn" />,
+  },
+  {
+    icon: <IconSkype title="Skype" />,
+  },
+  {
+    icon: <IconTelegram title="Telegram" />,
+  },
+  {
+    icon: <IconInstagram title="Instagram" />,
+  },
+]
+
+const socialData = data.social.links.map((item, idx) => ({
+  ...item,
+  ...socialIcons[idx],
+}))
 
 const Social = () => {
   gsap.registerPlugin(ScrollTrigger)

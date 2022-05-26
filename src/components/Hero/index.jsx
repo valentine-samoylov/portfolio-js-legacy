@@ -6,7 +6,7 @@ import { useNav } from '@/hooks/useNav'
 import './index.scss'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
-import { heroData } from '@/data'
+import data from '@/db'
 import IconArrowRight from '@/assets/images/svg/arrow-right-long.svg'
 import bgImage from '@/assets/images/bg/bg.png?as=webp'
 
@@ -44,12 +44,12 @@ const Hero = () => {
       <Container>
         <div className="hero__inner">
           <h1 className="hero__title">
-            <span className="hero__name">{heroData.firstName}</span>
-            <span className="hero__name">{heroData.lastName}</span>
+            <span className="hero__name">{data.hero.firstName}</span>
+            <span className="hero__name">{data.hero.lastName}</span>
           </h1>
           <h2 className="hero__subtitle">
-            <span className="hero__details">{heroData.position}</span>
-            <span className="hero__details">{heroData.location}</span>
+            <span className="hero__details">{data.hero.position}</span>
+            <span className="hero__details">{data.hero.location}</span>
           </h2>
           <Button {...commonButtonProps} type="primary" variant="reversed">
             <IconArrowRight />

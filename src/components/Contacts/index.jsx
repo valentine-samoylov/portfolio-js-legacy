@@ -9,7 +9,21 @@ import Heading from '@/components/Heading'
 import Subheading from '@/components/Subheading'
 import Social from '@/components/Social'
 import Link from '@/components/Link'
-import { contactsData } from '@/data'
+import data from '@/db'
+import IconPhone from '@/assets/images/svg/phone.svg'
+import IconMail from '@/assets/images/svg/mail.svg'
+
+const contactsIcons = [
+  { icon: <IconPhone /> },
+  {
+    icon: <IconMail />,
+  },
+]
+
+const contactsData = data.contacts.links.map((item, idx) => ({
+  ...item,
+  ...contactsIcons[idx],
+}))
 
 const Contacts = () => {
   const contactRef = useNav('Contacts')
@@ -45,11 +59,9 @@ const Contacts = () => {
   return (
     <section className="contacts section ta-c" id="contactsSection" ref={contactRef}>
       <Container>
-        <Heading id="contactsHeading">Get in touch</Heading>
+        <Heading id="contactsHeading">{data.contacts.heading}</Heading>
         <div className="contacts__inner">
-          <Subheading variant="centered">
-            Feel free to contact me in any of the following ways:
-          </Subheading>
+          <Subheading variant="centered">{data.contacts.subheading}</Subheading>
           <ul className="contacts__list">
             {contactsData.map((contact, idx) => (
               <li className="contacts__item" key={idx}>
