@@ -1,5 +1,6 @@
 // Button
 import './index.scss'
+import scrollToSection from '@/utils/scrollToSection'
 
 const buttonProps = {
   type: {
@@ -12,17 +13,28 @@ const buttonProps = {
   },
 }
 
-const Button = ({ children, as, type, variant, href, ...props }) => {
+const Button = ({ children, as, type, variant, href, targetId, ...props }) => {
   const classes = `button ${buttonProps.type[type] || ''} ${buttonProps.variant[variant] || ''}`
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    scrollToSection(targetId)
+  }
 
   return (
     <>
       {as === 'a' ? (
-        <a className={classes} href={href || '#'} {...props}>
+        <a
+          className={classes}
+          href={href || '#'}
+          targetId={targetId || ''}
+          {...props}
+          onClick={handleClick}
+        >
           {children}
         </a>
       ) : (
-        <button className={classes} {...props}>
+        <button className={classes} {...props} type="button">
           {children}
         </button>
       )}

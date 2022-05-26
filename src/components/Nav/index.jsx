@@ -29,6 +29,7 @@ const Nav = () => {
       <button
         className={`nav__btn ${isOpen ? 'isActive' : ''}`}
         title="Navigation Menu"
+        type="button"
         onClick={toggle}
       >
         <svg width={40} height={40} viewBox="0 0 100 100">
@@ -40,9 +41,9 @@ const Nav = () => {
 
       <div className={`nav__body ${isOpen ? 'isOpen' : ''}`}>
         <ul className="nav__links d-f">
-          {navLinks.map(({ navLinkId, scrollToId, linkText }, idx) => (
+          {navLinks.map(({ navLinkId, targetId, linkText }, idx) => (
             <li className="nav__item" onClick={toggle} onBlur={hide} onFocus={show} key={idx}>
-              <NavLink navLinkId={navLinkId} scrollToId={scrollToId} linkText={linkText} />
+              <NavLink navLinkId={navLinkId} targetId={targetId} linkText={linkText} />
             </li>
           ))}
         </ul>

@@ -2,14 +2,15 @@
 import { useContext } from 'react'
 import { NavContext } from '@/context/NavContext'
 import './index.scss'
+import scrollToSection from '@/utils/scrollToSection'
 
-const NavLink = ({ navLinkId, scrollToId, linkText }) => {
+const NavLink = ({ navLinkId, targetId, linkText }) => {
   const { activeNavLinkId, setActiveNavLinkId } = useContext(NavContext)
 
   const handleClick = (e) => {
     e.preventDefault()
     setActiveNavLinkId(navLinkId)
-    document.getElementById(scrollToId).scrollIntoView({ behavior: 'smooth' })
+    scrollToSection(targetId)
   }
 
   return (

@@ -10,21 +10,13 @@ import { heroData } from '@/data'
 import IconArrowRight from '@/assets/images/svg/arrow-right-long.svg'
 import bgImage from '@/assets/images/bg/bg.png?as=webp'
 
-const buttonProps = {
+const commonButtonProps = {
   as: 'a',
-  type: 'primary',
-  variant: 'reversed',
-  href: '#aboutSection',
+  targetId: 'aboutSection',
 }
 
 const Hero = () => {
   const heroRef = useNav('Hero')
-
-  const handleClick = (e) => {
-    e.preventDefault()
-    const scrollTo = e.target.getAttribute('href')
-    document.querySelector(scrollTo).scrollIntoView({ behavior: 'smooth' })
-  }
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -59,12 +51,12 @@ const Hero = () => {
             <span className="hero__details">{heroData.position}</span>
             <span className="hero__details">{heroData.location}</span>
           </h2>
-          <Button {...buttonProps} onClick={handleClick}>
+          <Button {...commonButtonProps} type="primary" variant="reversed">
             <IconArrowRight />
             Find out more
           </Button>
         </div>
-        <a className="hero__scrollDown" href="#aboutSection" onClick={handleClick}></a>
+        <Button className="hero__scrollDown" {...commonButtonProps}></Button>
       </Container>
     </section>
   )
