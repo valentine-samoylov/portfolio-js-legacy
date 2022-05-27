@@ -12,7 +12,7 @@ const buttonProps = {
   as: 'link',
   type: 'primary',
   variant: 'centered',
-  href: 'https://drive.google.com/uc?id=10s3usMhRhyWwhUrEZj5a7y_d82x0gR92&export=download',
+  href: 'https://drive.google.com/uc?id=1HqqtWwp-QbntUKmBzv76KKXtAL9G7GKy&export=download',
 }
 
 const Download = () => {
