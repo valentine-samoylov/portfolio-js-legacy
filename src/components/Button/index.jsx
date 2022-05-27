@@ -23,14 +23,18 @@ const Button = ({ children, as, type, variant, href, targetId, ...props }) => {
 
   return (
     <>
-      {as === 'a' ? (
+      {as === 'anchor' ? (
         <a
           className={classes}
           href={href || '#'}
           targetId={targetId || ''}
-          {...props}
           onClick={handleClick}
+          {...props}
         >
+          {children}
+        </a>
+      ) : as === 'link' ? (
+        <a className={classes} href={href || '#'} {...props}>
           {children}
         </a>
       ) : (

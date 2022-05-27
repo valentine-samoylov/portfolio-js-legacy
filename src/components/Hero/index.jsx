@@ -11,7 +11,7 @@ import IconArrowRight from '@/assets/images/svg/arrow-right-long.svg'
 import bgImage from '@/assets/images/bg/bg.png?as=webp'
 
 const commonButtonProps = {
-  as: 'a',
+  as: 'anchor',
   targetId: 'aboutSection',
 }
 

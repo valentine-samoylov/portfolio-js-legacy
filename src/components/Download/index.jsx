@@ -9,10 +9,10 @@ import Button from '@/components/Button'
 import IconDownload from '@/assets/images/svg/download.svg'
 
 const buttonProps = {
-  as: 'a',
+  as: 'link',
   type: 'primary',
   variant: 'centered',
-  href: 'https://drive.google.com/uc?id=11gdTeugEQrxj56uDZ_g45hxbUIziW1cf&export=download',
+  href: 'https://drive.google.com/uc?id=10s3usMhRhyWwhUrEZj5a7y_d82x0gR92&export=download',
 }
 
 const Download = () => {
